@@ -4,6 +4,8 @@ import 'package:flutter_xiecheng/dao/home_dao.dart';
 import 'package:flutter_xiecheng/model/home_model.dart';
 import 'package:flutter_xiecheng/widget/home/home_grid_nav.dart';
 import 'package:flutter_xiecheng/widget/home/home_local_nav.dart';
+import 'package:flutter_xiecheng/widget/home/home_sale_box.dart';
+import 'package:flutter_xiecheng/widget/home/home_sub_nav.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -102,11 +104,8 @@ class _HomePageState extends State<HomePage> {
                         ),
                         HomeLocalVavList(mHomeModel.localNavList),
                         HomeGridNav(mHomeModel.gridNav),
-                        Container(
-                          height: 800,
-                          color: Colors.blue,
-                          child: Text("hello shadow"),
-                        )
+                        HomeSubVavList(mHomeModel.subNavList),
+                        HomeSalesBoxList(mHomeModel.salesBox),
                       ],
                     )),
                 Positioned(
